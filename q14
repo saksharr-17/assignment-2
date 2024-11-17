@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int arr[40], n, i, j, isDuplicate = 0;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements:\n");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Duplicates in the array: ");
+    for (i = 0; i < n; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                printf("%d ", arr[i]);
+                isDuplicate = 1;
+            }
+        }
+    }
+
+    if (!isDuplicate) {
+        printf("-1");
+    }
+
+    printf("\n");
+
+    return 0;
+}
