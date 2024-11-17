@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int marks[40], n, i, max, min;
+
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    printf("Enter the marks of %d students:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &marks[i]);
+    }
+    max = min = marks[0];
+
+    for (i = 1; i < n; i++) {
+        if (marks[i] > max) {
+            max = marks[i];
+        }
+        if (marks[i] < min) {
+            min = marks[i];
+        }
+    }
+
+    printf("Maximum score: %d\n", max);
+    printf("Minimum score: %d\n", min);
+
+    return 0;
+}
